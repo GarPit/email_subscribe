@@ -74,7 +74,7 @@ end
 #
 namespace :deploy do
 
-  after :publishing, 'foreman:export'
+  #after :publishing, 'foreman:export'
   after :publishing, :restart
   after :finishing, 'deploy:cleanup'
 
