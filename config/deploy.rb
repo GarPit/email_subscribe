@@ -3,7 +3,7 @@
 lock '3.1.0'
 
 set :application, "emails"
-set :repo_url, "ssh://a@gitent-scm.com/git/gradus/#{fetch(:application)}"
+set :repo_url, "git@github.com:GarPit/email_subscribe.git"
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
