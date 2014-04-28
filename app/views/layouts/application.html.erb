@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example that shows off a responsive product landing page.">
+
+    <title><%= t("service_name") %></title>
+
+
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/main-grid-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <!--<![endif]-->
+
+
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <!--<![endif]-->
+
+
+
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+</head>
+<body>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="/"><%= t("service_name") %></a>
+
+    </div>
+</div>
+
+<div class="splash-container">
+    <div class="splash">
+        <%= header :h1, t(:awesome_subscribing), :class => "splash-head" %>
+        <p class="splash-subhead">
+            <%= t("subscribe_slogan") %>
+        </p>
+        <p>
+            <a href="#new_subscriber" class="pure-button pure-button-primary"><%= t("get_started") %></a>
+        </p>
+    </div>
+</div>
+
+<div class="content-wrapper">
+
+
+    <div class="content">
+      <%= yield :slogan %>
+      <%= yield %>
+    </div>
+
+    <div class="footer l-box is-center">
+      <%= l Time.zone.now, :format => :long %>
+    </div>
+
+</div>
+
+<script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) {
+    // This just makes sure that the href="#" attached to the <a> elements
+    // don't scroll you back up the page.
+    Y.one('body').delegate('click', function (e) {
+        e.preventDefault();
+    }, 'a[href="#"]');
+});
+</script>
+
+
+
+
+
+</body>
+</html>

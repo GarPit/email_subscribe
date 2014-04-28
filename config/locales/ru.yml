@@ -1,0 +1,20 @@
+ru:
+  service_name: "Сервис подписок"
+  subscribe_slogan: "Подпишитесь на наш чудесный сервис сегодня!"
+  get_started: "Приступим"
+  awesome_subscribing: "Прекрасная подписка"
+  subscribe_now: "Подпишитесь прямо сейчас"
+  subscribe: "Подписаться"
+  update: "Обновить"
+  activerecord:
+    attributes:
+      subscriber:
+        name: "Имя"
+        email: "Адрес электронной почты"
+        subscriptions: "Подписки"
+    errors:
+      models:
+        subscriber:
+          attributes:
+            email:
+              email: "не является адресом электронной почты"

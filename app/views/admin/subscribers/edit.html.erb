@@ -1,0 +1,6 @@
+<%= form_for [:admin, @subscriber], :html => {:class => "pure-form pure-form-stacked"} do |form| %>
+  <fieldset>
+    <%= render 'subscribers/form', :form => form %>
+    <%= form.submit t(:update), :class => "pure-button" %>
+  </fieldset>
+<% end %>

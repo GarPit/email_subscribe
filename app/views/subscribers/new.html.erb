@@ -1,0 +1,15 @@
+<% content_for :slogan do %>
+<% end %>
+
+<%= header :h2, t(:subscribe_now), :class => "content-head is-center" %>
+
+<div class="pure-g">
+  <div class="l-box-lrg pure-u-1 pure-u-med-2-5">
+    <%= form_for @subscriber, :remote => true, :html => {:class => "pure-form pure-form-stacked"} do |form| %>
+      <fieldset>
+        <%= render 'form', :form => form %>
+        <%= form.submit t(:subscribe), :class => "pure-button" %>
+      </fieldset>
+    <% end %>
+  </div>
+</div>

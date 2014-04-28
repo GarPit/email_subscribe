@@ -1,0 +1,13 @@
+<% if @subscriber.errors.present? %>
+  <ul>
+    <% @subscriber.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+<label><%= Subscriber.human_attribute_name(:name) %></label>
+<%= form.text_field :name %>
+<label><%= Subscriber.human_attribute_name(:email) %></label>
+<%= form.text_field :email %>
+<label><%= Subscriber.human_attribute_name(:subscriptions) %></label>
+<%= form.collection_select :subscription_ids, Subscription.all, :id, :name, {}, :multiple => true %>

@@ -1,0 +1,6 @@
+<% if @subscriber.errors.present? %>
+  alert("<%= @subscriber.errors.full_messages.join('\n') %>");
+<% else %>
+  alert("Вы подписаны. Спасибо!");
+  $('form')[0].reset();
+<% end %>
